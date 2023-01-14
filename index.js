@@ -1,9 +1,13 @@
-function superbowlWin(record) {
-    for (let i = 0; i < record.length; i++) {
-      if (record[i].result === 'W') {
-        return record[i].year;
-      }
-    }
-    return undefined;
-  }
-  
+// function superbowlWin(record) {
+//   const win = record.find(game => game.result === "W");
+//   if (win) {
+//     return win.year;
+//   } else {
+//     return undefined;
+//   }
+// }
+
+superbowlWin = (record) => {
+  const result = record.find( record => record.result === "W" );
+  return !!result ? result.year : undefined;
+}
